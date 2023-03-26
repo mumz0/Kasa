@@ -1,4 +1,15 @@
 @import "sass/variables";
 @import "components/header/header";
 @import "pages/home/home";
+@import "pages/404/error";
 @import "components/footer/footer";
+
+#root{
+    margin:auto;
+    max-width: 1440px;
+
+}
+.App{
+    margin-inline: 5rem;
+    
+}
