@@ -1,8 +1,14 @@
-export default function Home() {
-	return (
+import React from "react"
+import Locations from "../../components/cards/cards"
+import Banner from "../../components/banner/banner"
 
-			<div>
-                home
-			</div>
-	);
+function Home() {
+  return (
+    <div>
+      <Banner />
+      <Locations />
+    </div>
+  );
 }
+
+export default Home
