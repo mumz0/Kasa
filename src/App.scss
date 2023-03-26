@@ -1,13 +1,13 @@
 @import "sass/variables";
 @import "components/header/header";
 @import "pages/home/home";
-@import "pages/404/error";
 @import "components/footer/footer";
+@import "pages/404/error";
+@import "pages/housing/housing";
 
 #root{
-    margin:auto;
     max-width: 1440px;
-
+    margin:auto;
 }
 .App{
     margin-inline: 5rem;
