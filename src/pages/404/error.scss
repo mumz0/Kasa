@@ -1,0 +1,20 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: $primary-color;
+    h1{
+        font-size: 160px;
+        margin: 0;
+    }
+    p{
+        font-size: xx-large;
+        margin: 5rem 0 15rem 0;
+    }
+    a{
+        color: $primary-color;
+    }
+
+}
+
