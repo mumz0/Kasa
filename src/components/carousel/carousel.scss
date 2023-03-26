@@ -1,0 +1,28 @@
+.carousel {
+    height: 20rem;
+    position: relative;
+    &__image{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    &__nextIcon{
+        position: absolute;
+        top: 8rem;
+        right: 1rem;
+    }
+    &__previousIcon{
+        position: absolute;
+        top: 8rem;
+        left: 1rem;
+    }
+    &__count{
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        color: white;
+        font-size: 18px;
+    }
+}
+
