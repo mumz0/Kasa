@@ -1,12 +1,8 @@
-import BannerImg from "../../assets/images/banner.png"
-
-function Banner() {
+export default function Banner(props) {
     return (
             <div className="banner">
-                <img src={BannerImg} alt="Banner" />
-
-                <p className="banner_text">Chez vous, partout et ailleurs</p>
+                <img src={props.image} alt="Banner" />
+                <p className="banner_text">{props.text}</p>
             </div>
     )
 }
-export default Banner;

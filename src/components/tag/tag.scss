@@ -1,0 +1,17 @@
+.tags{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    gap: 1rem;
+
+}
+.tag{
+    display: flex;
+    height: 1.5rem;
+    background-color: $primary-color;
+    border-radius: 20px;
+    &__text{
+        padding-inline: 2rem;
+        color: white;
+    }
+}
