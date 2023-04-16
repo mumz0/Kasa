@@ -5,9 +5,10 @@ header {
     margin-top: 2rem;
     margin-bottom: 3rem;
     margin-inline: 5rem;
+
     .logo {
         width: auto;
-        height: 47px;
+        height: 45px;
     }
 
     ul {
@@ -25,10 +26,43 @@ header {
         }
 
         li {
-            padding-inline: 15px;
             list-style: none;
             color: $primary-color;
             font-size: 20px;
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        margin-inline: 1rem;
+        margin-bottom: 2rem;
+
+        .logo {
+            height: 35px;
+        }
+
+        ul {
+            gap: 1rem;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    header li {
+            text-transform: uppercase;
+        }
+    }
+
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+    header ul li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header ul li{
+        font-size: 13px;
     }
 }

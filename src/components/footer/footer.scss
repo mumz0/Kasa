@@ -7,18 +7,23 @@ footer {
     
 }
 
-.footer_content {
+.footer-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    img {
-        width: 122px;
-        height: auto;
-        margin-bottom: 30px;
-        object-fit: cover;
-    }
-    .footer_text{
-        color: white;
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 122px;
+            height: auto;
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+        .footer-text{
+            color: white;
+        }
     }
 }
+

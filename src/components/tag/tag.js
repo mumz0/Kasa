@@ -1,9 +1,11 @@
 export default function Tag(props) {
   return (
     <div className="tags">
-      <div className="tag">
-        <span className="tag__text">{props.tag}</span>
-      </div>
+      {props.tags.map((tag) => (
+        <div key={tag} className="tag">
+          <span className="tag__text">{tag}</span>
+        </div>
+      ))}
     </div>
   );
 }

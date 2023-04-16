@@ -1,39 +1,57 @@
-import axios from "axios"
 import React from "react"
 import {useEffect, useState} from "react"
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from "../../components/carousel/carousel"
-import Headings from "../../components/headings/headings";
 import Collapse from "../../components/collapse/collapse";
+import Tag from "../../components/tag/tag";
+import Profile from "../../components/profile/profile";
+import Rating from "../../components/rating/rating";
 
 function Housing() {
 	const navigate = useNavigate();
 	const id = useParams().id
 	const [data, setData] = useState([])
+	
 	useEffect(() => {
-		async function getData(){
-		const response = await axios.get("../data.json");
-		const elem = await response.data.find((item) => item.id === id);
-		setData(elem)
-		if (elem === undefined) {
-			navigate("/error", { state: { message: "data not found" } }); 
+		async function getData() {
+		  try {
+			const response = await fetch("../data.json");
+			const jsonData = await response.json();
+			const elem = jsonData.find((item) => item.id === id);
+			if (!elem) {
+			  throw new Error("Data not found");
+			}
+			setData(elem);
+		  } catch (error) {
+			navigate("/error", { state: { message: error.message } });
+		  }
 		}
-	  }
-	  getData()}, [id,navigate]);
-	  	console.log(data.description)
-		console.log(data.equipments)
+		getData();
+	  }, [id, navigate]);
+
 		if (data.id){
-			console.log(data)
 			return (
-        <main>
+        <div>
           <Carousel carouselItems={data.pictures} />
-		  <Headings tags= {data.tags} title = {data.title} location = {data.location} name = {data["host"]["name"]} 
-		  rating = {data.rating} picture = {data["host"]["picture"]} />
-		  <section>
+		  <div className="headings">
+        <div className="headings__description-container">
+          <h1 className="headings__title">{data.title}</h1>
+          <p className="headings__location">{data.location}</p>
+          <Tag key={data.tags} tags={data.tags} />
+        </div>
+        <div className="headings__profile-container">
+          <Profile name={data["host"]["name"]} picture={data["host"]["picture"]} />
+          <Rating rating={data.rating} />
+        </div>
+      </div>
+		  <section className='collapses'>
 			<Collapse label = "Description" content = {data.description} />
-			<Collapse label = "Equipments" content = {data.equipments} />
+			<Collapse label = "Equipments" content = {
+                  <ul>{data.equipments.map((equipment) => 
+                    <li key={equipment}>{equipment}</li>)}
+                  </ul>} />
 		  </section>
-        </main>
+        </div>
       );
 }}
 export default Housing

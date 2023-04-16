@@ -2,7 +2,7 @@
     padding: 3rem 2rem;
     border-radius: 25px 25px 0 0;
     background-color: rgb(235, 235, 235);
-
+    margin-top: 3rem;
     .cont {
         display: flex;
         flex-direction: row;
@@ -47,5 +47,28 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .cards_container{
+        padding: 0;
+        background-color: white;
+        margin-bottom: 3rem;
+     .cont .card {
+        width: 100%;
+        &_img{
+            border-radius: 10px;
+        }
+        &_title{
+            width: 75%;
+        }
+    }
+}
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .cards_container .cont .card {
+        width: 100%;
     }
 }

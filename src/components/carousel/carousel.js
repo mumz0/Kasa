@@ -1,6 +1,6 @@
 import { useState } from "react";
-import previousIcon from "../../assets/images/vector-left.svg";
-import nextIcon from "../../assets/images/vector-right.svg";
+import previousIcon from "../../assets/logo/vector-left.svg";
+import nextIcon from "../../assets/logo/vector-right.svg";
 
 export default function Carousel ({carouselItems}){
   const [currentItem, setCurrentItem] = useState(0);
