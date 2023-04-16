@@ -34,8 +34,14 @@
     &__content {
       font-size: 17px;
       border-radius: 8px;
-      padding: 1rem;
+      padding: 1.5rem;
       background-color: #f0f0f0;
       color: $primary-color;
+      ul{
+        list-style: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+      }
     }
   }
