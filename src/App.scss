@@ -4,12 +4,24 @@
 @import "components/footer/footer";
 @import "pages/404/error";
 @import "pages/housing/housing";
+@import "pages/about/about";
 
 #root{
-    max-width: 1440px;
+    max-width: 1920px;
     margin:auto;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 .App{
     margin-inline: 5rem;
-    
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+    .App{
+        margin-inline: 1rem;
+    }
 }

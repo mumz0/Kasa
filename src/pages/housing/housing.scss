@@ -1,3 +1,64 @@
 @import "../../components/carousel/carousel";
-@import "../../components/headings/headings";
 @import "../../components/collapse/collapse";
+@import "../../components/tag/tag";
+@import "../../components/profile/profile";
+@import "../../components/rating/rating";
+
+.collapses {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.headings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &__title {
+        color: $primary-color;
+        margin: 0;
+    }
+
+    &__location {
+        color: $primary-color;
+    }
+
+    &__description-container {
+        width: 75%;
+    }
+
+    &__profile-container {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .collapses {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headings {
+        flex-direction: column;
+        justify-content: center;
+
+        &__description-container {
+            width: 100%;
+        }
+
+        &__profile-container {
+            flex-direction: row-reverse;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+    }
+}

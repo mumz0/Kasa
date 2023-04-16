@@ -18,3 +18,15 @@
 
 }
 
+@media screen and (max-width: 768px){
+    .error{
+        margin-top: 5rem;
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: xx-large;
+            margin: 5rem 0 10rem 0;
+        }
+    }
+}

@@ -26,3 +26,13 @@
     }
 }
 
+@media screen and (max-width: 767px){
+    .carousel__nextIcon{
+        height: 2rem;
+        top: 9rem;
+    }
+    .carousel__previousIcon{
+        height: 2rem;
+        top: 9rem;
+    }
+}

@@ -1,13 +1,41 @@
-.button_container{
-    border: solid;
-    background-color: $primary-color;
-    width: 10rem;
-    height: 2rem;
-}
-.collapse_content{
-    width: 10rem;
-    height: 30rem;
-}
-.bottomArrow{
-    color:black;
-}
+.collapse {
+    width: 50%;
+  
+    &__button-container {
+      border-radius: 8px;
+      background-color: $primary-color;
+      width: 100%;
+  
+      .button-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 2.5rem;
+  
+        &__text {
+          color: white;
+          margin: 0;
+          padding-left: 1rem;
+          align-self: center;
+        }
+  
+        &__arrow {
+          margin-right: 1rem;
+          align-self: center;
+          transition: transform 0.2s ease-in-out;
+        }
+  
+        &__arrow-rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  
+    &__content {
+      font-size: 17px;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      color: $primary-color;
+    }
+  }
